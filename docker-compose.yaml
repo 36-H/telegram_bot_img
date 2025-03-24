@@ -1,0 +1,12 @@
+services:
+  helios-img-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - API_KEY=${API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - URL=${URL}
+    volumes:
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
