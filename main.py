@@ -72,11 +72,11 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
             markdown_link = f"![image]({URL}/{webp})"
 
             await update.message.reply_text(
-                f"上传成功！\n\n"
-                f"原始图片链接：`{URL}/{original}`\n\n"
-                f"AVIF图片链接：`{URL}/{avif}`\n\n"
-                f"WebP图片链接：`{URL}/{webp}`\n\n"
-                f"Markdown：`{markdown_link}`\n\n",
+                f"<b>上传成功！<b>\n\n"
+                f"<b>原始图片链接</b>\n\n<pre>{URL}/{original}</pre>\n\n"
+                f"<b>AVIF图片链接</b>\n\n<pre>{URL}/{avif}</pre>\n\n"
+                f"<b>WebP图片链接</b>\n\n<pre>{URL}/{webp}</pre>\n\n"
+                f"<b>Markdown</b>\n\n<pre>{markdown_link}</pre>\n\n",
                 parse_mode='Markdown'
             )
         else:
