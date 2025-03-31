@@ -39,7 +39,7 @@ def upload(photo_path):
         files = {
             'images[]': f
         }
-        response = requests.post(f'{URL}/upload', files=files, headers=headers)
+        response = requests.post(f'{URL}/api/upload', files=files, headers=headers)
         # 检查响应
         if response.status_code == 200:
             try:
